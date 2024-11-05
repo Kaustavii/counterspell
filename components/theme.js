@@ -1,4 +1,3 @@
-
 import base from '@rebass/preset'
 import { merge } from 'lodash'
 
@@ -8,48 +7,32 @@ export const space = [0, 4, 8, 16, 32, 64, 128, 256, 512]
 
 export const fontSizes = [14, 16, 20, 24, 32, 48, 64, 96, 128]
 
+// Updated color palette with a darker pink
 export const palette = {
-  darker: '#121217',
-  dark: '#17171d',
-  darkless: '#252429',
-  bandark: '#1b1a1f',
-  // greyscale
-  black: '#1f2d3d',
+  darker: '#0b0b0d', // Very dark background, almost black
+  dark: '#1c1c1f',   // Darker grayish black
+  darkless: '#2a2a2e', // Slightly lighter dark color
+  bandark: '#181818', // Dark black for banners
+  // New theme colors
+  black: '#1f1f1f',   // Black for base text and backgrounds
+  pink: '#d1005b',    // Darker pink for accents and primary highlights
+  blue: '#007acc',    // Blue for secondary accents
+  neonGreen: '#39ff14', // Neon green for minor highlights
+  // Greyscale
   steel: '#273444',
   slate: '#3c4858',
   muted: '#8492a6',
   smoke: '#e0e6ed',
   snow: '#f9fafc',
   white: '#ffffff',
-  // brand
-  primary: '#ffb400',
-  primaryWash: '#ffdc89',
-  /*
-  alt: '#007a87',
-  altWash: '#bfe6ea',
-  altWashLight: '#dffbfd',
-  altLight: '#009aab',
-  altDark: '#004f58',
-  accent: '#ff5a5f',
-  accentLight: '#ff7e82',
-  accentWash: '#ffd4d5',
-  accentDark: '#e00007',
-  success: '#3fb34f',
-  error: '#b23f42',
-  cool: '#00bdde',
-  coolWash: '#7cecff'
-  */
-  alt: '#13cfbf',
-  altDark: '#05386b',
-  altLight: '#6ed5fa',
-  altWash: '#379683',
-  altWashLight: '#9cf0df',
-  accent: '#5cdb95',
-  accentWash: '#befad9',
-  accentLight: '#8ee4af',
-  accentDark: '#189975',
-  success: '#3fb34f',
-  error: '#b23f42',
+  // Brand colors
+  primary: '#d1005b',  // Darker pink as primary color
+  primaryWash: '#ff99b8', // Lighter wash for background
+  accent: '#007acc',   // Blue as accent color
+  accentLight: '#66bfff', // Lighter blue
+  accentDark: '#004f8c', // Darker blue
+  success: '#39ff14',   // Neon green for success
+  error: '#ff4c4c',     // Bright red for error
   cool: '#00bdde',
   coolWash: '#7cecff',
   lemonade: '#ff5a5f'
@@ -62,26 +45,24 @@ const theme = merge(base, {
   initialColorMode: 'light',
   colors: {
     ...palette,
-    text: palette.black,
-    background: palette.snow,
-    cards: palette.white,
+    text: palette.white,
+    background: palette.black,
+    cards: palette.darkless,
     muted: palette.muted,
-    sunken: palette.smoke,
-    bannerBG: palette.alt,
+    sunken: palette.bandark,
+    bannerBG: palette.primary,
     bannerColor: palette.white,
-    bannerColorAlt: palette.white,
+    bannerColorAlt: palette.accentLight,
     coolBg: palette.cool,
     modes: {
       dark: {
         text: palette.white,
-        background: palette.dark,
+        background: palette.darker,
         cards: palette.darkless,
-        sunken: palette.black,
-        // primaryWash: '#3f3822',
+        sunken: palette.bandark,
         primaryWash: palette.primaryWash,
         bannerBG: palette.bandark,
-        //bannerColor: palette.primary,
-        bannerColor: palette.coolWash,
+        bannerColor: palette.neonGreen,
         bannerColorAlt: palette.primaryWash,
         coolBg: palette.dark,
         cards: palette.darkless,
@@ -168,7 +149,7 @@ const theme = merge(base, {
       color: 'primary',
       cursor: 'pointer',
       ':hover, :focus': {
-        color: 'alt'
+        color: 'accent'
       }
     },
     p: {
