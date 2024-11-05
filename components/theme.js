@@ -14,7 +14,7 @@ export const palette = {
   darkless: '#2a2a2e', // Slightly lighter dark color
   bandark: '#181818', // Dark black for banners
   // New theme colors
-  black: '#1f1f1f',   // Black for base text and backgrounds
+  black: '#212F51',   // Black for base text and backgrounds
   pink: '#d1005b',    // Darker pink for accents and primary highlights
   blue: '#007acc',    // Blue for secondary accents
   neonGreen: '#39ff14', // Neon green for minor highlights
@@ -22,12 +22,12 @@ export const palette = {
   steel: '#273444',
   slate: '#3c4858',
   muted: '#8492a6',
-  smoke: '#e0e6ed',
+  smoke: '#CE155A', //counterspell dark pink
   snow: '#f9fafc',
   white: '#ffffff',
   // Brand colors
   primary: '#d1005b',  // Darker pink as primary color
-  primaryWash: '#ff99b8', // Lighter wash for background
+  primaryWash: '#2B3856', // Gray blue as accent color
   accent: '#007acc',   // Blue as accent color
   accentLight: '#66bfff', // Lighter blue
   accentDark: '#004f8c', // Darker blue
@@ -71,8 +71,8 @@ const theme = merge(base, {
   },
   fonts: {
     body:
-      'Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif',
-    heading: 'inherit',
+      'Geo,"Segoe UI",Roboto,sans-serif',
+    heading: 'Geo',
     mono: 'Menlo, monospace'
   },
   lineHeights: {
